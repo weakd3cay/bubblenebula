@@ -1386,9 +1386,10 @@ main {
         background: var(--ms-surface-solid);
     }
     /* UNIT3D positions every panel header at this width, so the next panel's header drew
-       over the open menu (also in stock UNIT3D); lift the menu above them */
+       over the open menu (also in stock UNIT3D); lift the menu above them, but stay under
+       the pinned header (z-index 10) or it shows through it when scrolled underneath */
     .panel__actions {
-        z-index: 20;
+        z-index: 2;
     }
 }
 /* Floating labels inside a panel header sat on the body colour (a dark notch). */
