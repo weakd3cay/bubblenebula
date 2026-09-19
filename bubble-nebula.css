@@ -1484,6 +1484,35 @@ main {
     transform: none;
 }
 
+/* Round icon buttons in tight rows (panel header bars, e.g. the chat's fullscreen button,
+   and torrent-card footers): padding + icon made them ~44px in a ~48px bar, and the
+   12% hover spring pushed them past the panel's clipped edge (also in fullscreen chat,
+   which is the same panel); card-footer buttons (43px) overflowed their 40px footer.
+   Fixed 34px circles with the icon centred, no spring; the hover colour still applies. */
+.panel__header .form__standard-icon-button:not(.form__standard-icon-button--skinny),
+.torrent-card__footer .form__standard-icon-button {
+    display: inline-grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    flex: none;
+}
+/* UNIT3D pulls the card footer's button area 12px up and down, 2px past the footer's 10px
+   padding, so its buttons always started above the (clipped) footer edge: span exactly
+   the footer's height and centre them. */
+.torrent-card__right-footer {
+    display: flex;
+    align-items: center;
+    margin-block: -10px;
+}
+.panel__header .form__standard-icon-button:hover,
+.panel__header .form__standard-icon-button:active,
+.torrent-card__footer .form__standard-icon-button:hover,
+.torrent-card__footer .form__standard-icon-button:active {
+    transform: none;
+}
+
 /* ---------- Colours UNIT3D hardcodes outside its variables ---------- */
 .panel__tab--active {
     color: var(--ms-accent);
