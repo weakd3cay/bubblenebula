@@ -1399,6 +1399,38 @@ a.form__button--text:hover { color: var(--button-text-fg); }
     border-radius: 6px;
 }
 
+/* ---------- Forum post toolbar ---------- */
+.post__toolbar {
+    align-items: center;
+    gap: 2px;
+    padding: 0 6px;
+}
+.post__permalink,
+.post__quote,
+.post__edit,
+.post__delete-button,
+.votes__like,
+.votes__dislike,
+.post__tip-button {
+    height: auto;
+    min-width: 0;
+    padding: 4px 9px;
+    border-radius: 8px;
+}
+.post__tip {
+    align-items: center;
+    gap: 4px;
+}
+.post__tip-button {
+    padding: 2px 10px;
+    border: 1px solid var(--ms-line);
+    border-radius: 999px;
+}
+.post__tip-button:hover {
+    background-color: transparent;
+    border-color: color-mix(in srgb, var(--ms-accent) 50%, transparent);
+}
+
 /* ---------- Colours UNIT3D hardcodes outside its variables ---------- */
 .panel__tab--active {
     color: var(--ms-accent);
