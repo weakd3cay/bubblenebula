@@ -14,7 +14,7 @@
 
 /* ---------- Variant tokens ---------- */
 :root {
-    /* Moonrise (default) */
+
     --ms-ground: #070a1c;
     --ms-sky-top: #0e1436;
     --ms-sky-bottom: #070a1c;
@@ -38,7 +38,7 @@
     --ms-free: #ffb27a;
     --ms-neb-a: rgba(60, 80, 200, 0.26);
     --ms-neb-b: rgba(255, 190, 90, 0.12);
-    --ms-r-panel: 8px; /* panels, cards, dialogs: small so panel headings clear the corner (was 16/20/14) */
+    --ms-r-panel: 8px;
     --ms-r-input: 12px;
     --ms-moon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 240'%3E%3Cdefs%3E%3CradialGradient id='h' r='.5'%3E%3Cstop offset='.55' stop-color='%23ffe9a8' stop-opacity='.35'/%3E%3Cstop offset='1' stop-color='%23ffe9a8' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='m' cx='.38' cy='.34' r='.75'%3E%3Cstop offset='0' stop-color='%23fff6cf'/%3E%3Cstop offset='.55' stop-color='%23ffd96e'/%3E%3Cstop offset='1' stop-color='%23e5ab3a'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='120' cy='120' r='118' fill='url(%23h)'/%3E%3Ccircle cx='120' cy='120' r='72' fill='url(%23m)'/%3E%3Cg fill='%23d99a2c' fill-opacity='.45'%3E%3Cellipse cx='84' cy='112' rx='14' ry='12'/%3E%3Cellipse cx='139' cy='74' rx='7' ry='6'/%3E%3Cellipse cx='158' cy='134' rx='12' ry='10'/%3E%3Cellipse cx='112' cy='160' rx='8' ry='6'/%3E%3Cellipse cx='118' cy='86' rx='4' ry='3'/%3E%3C/g%3E%3Cg fill='%23f7cd62'%3E%3Cellipse cx='85' cy='111' rx='10' ry='8'/%3E%3Cellipse cx='140' cy='73' rx='4' ry='3.5'/%3E%3Cellipse cx='159' cy='133' rx='8' ry='6.5'/%3E%3Cellipse cx='113' cy='159' rx='5' ry='3.5'/%3E%3C/g%3E%3Cpath d='M76 96q9-22 32-30' fill='none' stroke='%23fffbe6' stroke-width='5' stroke-linecap='round' stroke-opacity='.75'/%3E%3C/svg%3E");
     --ms-logo-img: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M14.5 2.5A9.5 9.5 0 1 0 21.5 15 8 8 0 0 1 14.5 2.5Z' fill='%23ffd96e'/%3E%3Ccircle cx='8.6' cy='9.6' r='1.3' fill='%23c98f22' fill-opacity='.7'/%3E%3Ccircle cx='11.6' cy='16.2' r='.9' fill='%23c98f22' fill-opacity='.7'/%3E%3C/svg%3E");
@@ -47,7 +47,6 @@
     --ms-moon-x: 12%;
     --ms-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 
-    /* UNIT3D's own variables, pointed at ours */
     --body-bg: transparent;
     --body-fg: var(--ms-text);
     --text-color: var(--ms-text);
@@ -90,27 +89,23 @@
     --top-nav-dropdown-menu-bg: var(--ms-surface-solid);
     --top-nav-dropdown-menu-border: 1px solid var(--ms-line);
     --top-nav-dropdown-menu-border-radius: 14px;
-    --top-nav-ratio-bar-fg: var(--ms-text); /* was muted: too faint at 11px over the sky */
+    --top-nav-ratio-bar-fg: var(--ms-text);
     --top-nav-icon-bar-icon-fg: var(--ms-muted);
     --top-nav-icon-bar-icon-hover-fg: var(--ms-text);
     --top-nav-icon-bar-icon-hover-bg: rgba(255, 255, 255, 0.07);
     --top-nav-icon-bar-icon-border-radius: 999px;
 }
 
-/* ---------- Every other UNIT3D variable, mapped onto the palette ----------
-   Derived tokens: a raised surface for things inside panels, a sunk one for
-   inputs, and semantic colours. Defined via the palette so every variant works. */
 :root {
     --ms-raised: color-mix(in srgb, var(--ms-surface-head), white 5%);
     --ms-sunk: rgba(0, 0, 0, 0.28);
-    /* the panel colour with its transparency removed, for menus that float over content */
+
     --ms-surface-solid: rgb(from var(--ms-surface) r g b / 1);
     --ms-strong: color-mix(in srgb, var(--ms-text), white 40%);
     --ms-danger: var(--ms-down);
     --ms-success: var(--ms-up);
     --ms-shadow: 0 18px 40px -24px rgba(0, 0, 0, 0.8);
 
-    /* base colour ramp some components reach for directly */
     --color-green: var(--ms-up);
     --color-light-green: color-mix(in srgb, var(--ms-up), white 20%);
     --color-dark-green: color-mix(in srgb, var(--ms-up), black 55%);
@@ -131,12 +126,10 @@
     --color-light-orange: var(--ms-free);
     --color-bright-white: #fff;
 
-    /* alerts: no box, the banner styles itself */
     --alert-bg: transparent;
     --alert-fg: var(--ms-text);
     --alert-gap-color: transparent;
 
-    /* achievements, articles, cards */
     --achievement-fg: var(--ms-text);
     --achievement-bg: var(--ms-surface);
     --achievement-box-shadow: var(--ms-shadow);
@@ -180,7 +173,6 @@
     --prize-icon-primary-color: var(--ms-accent);
     --prize-icon-secondary-color: var(--ms-accent-2);
 
-    /* forms */
     --bbcode-input-header-bg: var(--ms-surface-head);
     --bbcode-input-body-bg: var(--ms-sunk);
     --bbcode-input-border: 1px solid var(--ms-line);
@@ -243,7 +235,6 @@
     --meter-fg: var(--ms-accent);
     --meter-bg: var(--ms-sunk);
 
-    /* rendered BBCode (posts, messages, descriptions) */
     --bbcode-rendered-fg-default: var(--ms-text);
     --bbcode-rendered-fg-muted: var(--ms-muted);
     --bbcode-rendered-fg-subtle: var(--ms-faint);
@@ -259,7 +250,6 @@
     --bbcode-rendered-quote-bg: color-mix(in srgb, var(--ms-accent) 6%, transparent);
     --bbcode-rendered-quote-border: var(--ms-accent);
 
-    /* navigation bits */
     --breadcrumb-fg: var(--ms-muted);
     --breadcrumb-active-fg: var(--ms-text);
     --breadcrumb-hover-fg: var(--ms-accent);
@@ -312,7 +302,6 @@
     --notification-read: transparent;
     --notification-unread: var(--ms-accent);
 
-    /* chat, messages, forums */
     --message-bubble-bg: var(--ms-raised);
     --message-bubble-fg: var(--ms-text);
     --message-bubble-box-shadow: none;
@@ -342,7 +331,6 @@
     --subforum-listing-even-bg: transparent;
     --subforum-listing-border: none;
 
-    /* tables, lists, dialogs */
     --data-table-border-radius: 0;
     --key-value-even-bg: rgba(255, 255, 255, 0.018);
     --key-value-odd-bg: transparent;
@@ -360,7 +348,6 @@
     --footer-hr-fg: var(--ms-line);
     --scrollbar-color: color-mix(in srgb, var(--ms-accent) 30%, transparent);
 
-    /* torrent extras */
     --torrent-row-sticky-bg: color-mix(in srgb, var(--ms-accent) 10%, transparent);
     --torrent-row-sticky-fg: var(--ms-muted);
     --torrent-row-buttons-fg: var(--ms-muted);
@@ -383,7 +370,6 @@
     --torrent-group-table-stripe-odd: transparent;
     --torrent-group-chip-border: var(--ms-line);
 
-    /* movie/TV meta header */
     --meta-dropdown-bg: color-mix(in srgb, var(--ms-surface) 70%, transparent);
     --meta-dropdown-fg: var(--ms-text);
     --meta-dropdown-hover-bg: var(--ms-hover);
@@ -402,14 +388,11 @@
     --meta-chip-hover-bg: var(--ms-hover);
     --meta-popup-bg: var(--ms-surface-solid);
     --meta-popup-fg: var(--ms-muted);
-    /* Galactic frosts the detail-page menu and chips with backdrop-filter, which re-blurs the
-       twinkling sky every frame; flat tints instead (set below, since UNIT3D only applies
-       the -bg variables where backdrop-filter is unsupported) */
+
     --meta-dropdown-backdrop-filter: none;
     --meta-dropdown-backdrop-filter-hover: none;
     --meta-chip-backdrop-filter-hover: none;
 
-    /* donations */
     --donation-border-color: var(--ms-line);
     --donation-box-shadow-color: transparent;
     --donation-primary-text-color: var(--ms-text);
@@ -517,9 +500,6 @@ html::before {
         linear-gradient(180deg, var(--ms-sky-top), var(--ms-sky-bottom));
 }
 
-/* The small-star field used to drift left (300s loop). Stopped (user, 2026-09-19): the
-   header's backing copies this layer, and a drifting copy either crept visibly in
-   whole-pixel steps or repainted the header every frame. */
 body::before {
     inset: 0;
     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Ccircle cx='573' cy='476' r='0.7' fill='rgb(255,228,196)' fill-opacity='0.55'/%3E%3Ccircle cx='189' cy='524' r='0.7' fill='rgb(255,228,196)' fill-opacity='0.6'/%3E%3Ccircle cx='96' cy='457' r='0.8' fill='rgb(190,215,255)' fill-opacity='0.41'/%3E%3Ccircle cx='42' cy='405' r='0.7' fill='rgb(255,228,196)' fill-opacity='0.61'/%3E%3Ccircle cx='161' cy='15' r='0.7' fill='rgb(255,200,230)' fill-opacity='0.38'/%3E%3Ccircle cx='247' cy='30' r='0.5' fill='rgb(255,228,196)' fill-opacity='0.48'/%3E%3Ccircle cx='200' cy='531' r='0.7' fill='rgb(255,255,255)' fill-opacity='0.61'/%3E%3Ccircle cx='87' cy='468' r='0.7' fill='rgb(200,255,240)' fill-opacity='0.46'/%3E%3Ccircle cx='85' cy='260' r='0.9' fill='rgb(190,215,255)' fill-opacity='0.65'/%3E%3Ccircle cx='30' cy='71' r='0.7' fill='rgb(255,200,230)' fill-opacity='0.66'/%3E%3Ccircle cx='297' cy='395' r='0.7' fill='rgb(255,255,255)' fill-opacity='0.73'/%3E%3Ccircle cx='0' cy='218' r='0.8' fill='rgb(255,255,255)' fill-opacity='0.72'/%3E%3Ccircle cx='384' cy='406' r='0.5' fill='rgb(255,228,196)' fill-opacity='0.38'/%3E%3Ccircle cx='276' cy='344' r='0.8' fill='rgb(255,255,255)' fill-opacity='0.47'/%3E%3Ccircle cx='419' cy='120' r='0.5' fill='rgb(255,255,255)' fill-opacity='0.45'/%3E%3Ccircle cx='61' cy='476' r='0.5' fill='rgb(255,228,196)' fill-opacity='0.42'/%3E%3Ccircle cx='458' cy='521' r='0.7' fill='rgb(255,255,255)' fill-opacity='0.74'/%3E%3Ccircle cx='429' cy='392' r='0.8' fill='rgb(255,255,255)' fill-opacity='0.51'/%3E%3Ccircle cx='0' cy='276' r='0.9' fill='rgb(255,200,230)' fill-opacity='0.47'/%3E%3Ccircle cx='215' cy='191' r='0.9' fill='rgb(255,228,196)' fill-opacity='0.75'/%3E%3Ccircle cx='590' cy='102' r='0.7' fill='rgb(255,255,255)' fill-opacity='0.75'/%3E%3Ccircle cx='264' cy='9' r='0.6' fill='rgb(255,200,230)' fill-opacity='0.48'/%3E%3Ccircle cx='75' cy='76' r='0.6' fill='rgb(255,255,255)' fill-opacity='0.43'/%3E%3Ccircle cx='15' cy='377' r='0.8' fill='rgb(190,215,255)' fill-opacity='0.6'/%3E%3Ccircle cx='495' cy='588' r='0.6' fill='rgb(255,255,255)' fill-opacity='0.7'/%3E%3Ccircle cx='157' cy='318' r='0.6' fill='rgb(255,255,255)' fill-opacity='0.68'/%3E%3Ccircle cx='194' cy='162' r='0.6' fill='rgb(200,255,240)' fill-opacity='0.6'/%3E%3Ccircle cx='397' cy='494' r='0.7' fill='rgb(255,200,230)' fill-opacity='0.38'/%3E%3Ccircle cx='111' cy='39' r='0.5' fill='rgb(255,200,230)' fill-opacity='0.74'/%3E%3Ccircle cx='401' cy='263' r='0.6' fill='rgb(255,228,196)' fill-opacity='0.68'/%3E%3Ccircle cx='300' cy='532' r='0.7' fill='rgb(255,255,255)' fill-opacity='0.72'/%3E%3Ccircle cx='129' cy='233' r='0.9' fill='rgb(255,228,196)' fill-opacity='0.57'/%3E%3Ccircle cx='75' cy='286' r='0.8' fill='rgb(255,255,255)' fill-opacity='0.72'/%3E%3Ccircle cx='16' cy='70' r='0.6' fill='rgb(190,215,255)' fill-opacity='0.51'/%3E%3Ccircle cx='47' cy='180' r='0.6' fill='rgb(190,215,255)' fill-opacity='0.5'/%3E%3Ccircle cx='134' cy='94' r='0.7' fill='rgb(190,215,255)' fill-opacity='0.41'/%3E%3Ccircle cx='338' cy='534' r='0.7' fill='rgb(255,200,230)' fill-opacity='0.73'/%3E%3Ccircle cx='18' cy='486' r='0.7' fill='rgb(190,215,255)' fill-opacity='0.63'/%3E%3Ccircle cx='21' cy='76' r='0.9' fill='rgb(255,228,196)' fill-opacity='0.38'/%3E%3Ccircle cx='139' cy='74' r='0.6' fill='rgb(255,255,255)' fill-opacity='0.53'/%3E%3Ccircle cx='45' cy='132' r='0.6' fill='rgb(190,215,255)' fill-opacity='0.49'/%3E%3Ccircle cx='79' cy='427' r='0.8' fill='rgb(255,255,255)' fill-opacity='0.7'/%3E%3Ccircle cx='391' cy='388' r='0.7' fill='rgb(255,200,230)' fill-opacity='0.35'/%3E%3Ccircle cx='92' cy='118' r='0.5' fill='rgb(190,215,255)' fill-opacity='0.7'/%3E%3Ccircle cx='397' cy='594' r='0.8' fill='rgb(255,228,196)' fill-opacity='0.53'/%3E%3Ccircle cx='85' cy='531' r='0.8' fill='rgb(255,200,230)' fill-opacity='0.36'/%3E%3Ccircle cx='492' cy='22' r='0.7' fill='rgb(255,255,255)' fill-opacity='0.73'/%3E%3Ccircle cx='497' cy='261' r='0.5' fill='rgb(255,255,255)' fill-opacity='0.5'/%3E%3Ccircle cx='207' cy='530' r='0.6' fill='rgb(255,255,255)' fill-opacity='0.65'/%3E%3Ccircle cx='452' cy='510' r='0.6' fill='rgb(255,255,255)' fill-opacity='0.48'/%3E%3Ccircle cx='203' cy='441' r='0.8' fill='rgb(255,255,255)' fill-opacity='0.7'/%3E%3Ccircle cx='597' cy='324' r='0.7' fill='rgb(255,255,255)' fill-opacity='0.4'/%3E%3Ccircle cx='41' cy='65' r='0.7' fill='rgb(190,215,255)' fill-opacity='0.68'/%3E%3Ccircle cx='482' cy='281' r='0.5' fill='rgb(255,255,255)' fill-opacity='0.68'/%3E%3Ccircle cx='532' cy='505' r='0.7' fill='rgb(200,255,240)' fill-opacity='0.48'/%3E%3Ccircle cx='463' cy='328' r='0.8' fill='rgb(255,255,255)' fill-opacity='0.68'/%3E%3Ccircle cx='42' cy='287' r='0.6' fill='rgb(255,200,230)' fill-opacity='0.49'/%3E%3Ccircle cx='577' cy='19' r='0.8' fill='rgb(200,255,240)' fill-opacity='0.4'/%3E%3Ccircle cx='25' cy='272' r='0.7' fill='rgb(255,255,255)' fill-opacity='0.66'/%3E%3Ccircle cx='118' cy='457' r='0.8' fill='rgb(255,255,255)' fill-opacity='0.6'/%3E%3Ccircle cx='377' cy='79' r='0.8' fill='rgb(200,255,240)' fill-opacity='0.43'/%3E%3Ccircle cx='262' cy='182' r='0.8' fill='rgb(200,255,240)' fill-opacity='0.35'/%3E%3Ccircle cx='37' cy='183' r='0.7' fill='rgb(255,255,255)' fill-opacity='0.46'/%3E%3Ccircle cx='532' cy='512' r='0.6' fill='rgb(255,200,230)' fill-opacity='0.75'/%3E%3Ccircle cx='229' cy='89' r='0.6' fill='rgb(255,228,196)' fill-opacity='0.72'/%3E%3Ccircle cx='133' cy='461' r='0.8' fill='rgb(255,228,196)' fill-opacity='0.43'/%3E%3Ccircle cx='6' cy='385' r='0.9' fill='rgb(255,200,230)' fill-opacity='0.58'/%3E%3Ccircle cx='351' cy='474' r='0.9' fill='rgb(190,215,255)' fill-opacity='0.61'/%3E%3Ccircle cx='126' cy='218' r='0.6' fill='rgb(255,255,255)' fill-opacity='0.71'/%3E%3Ccircle cx='317' cy='549' r='0.9' fill='rgb(190,215,255)' fill-opacity='0.45'/%3E%3Ccircle cx='16' cy='356' r='0.8' fill='rgb(255,200,230)' fill-opacity='0.38'/%3E%3Ccircle cx='563' cy='431' r='0.7' fill='rgb(190,215,255)' fill-opacity='0.54'/%3E%3Ccircle cx='65' cy='439' r='0.5' fill='rgb(255,255,255)' fill-opacity='0.42'/%3E%3Ccircle cx='143' cy='481' r='0.6' fill='rgb(255,255,255)' fill-opacity='0.75'/%3E%3Ccircle cx='530' cy='450' r='0.9' fill='rgb(255,228,196)' fill-opacity='0.58'/%3E%3Ccircle cx='226' cy='449' r='0.8' fill='rgb(255,200,230)' fill-opacity='0.57'/%3E%3Ccircle cx='575' cy='168' r='0.8' fill='rgb(255,200,230)' fill-opacity='0.56'/%3E%3Ccircle cx='262' cy='319' r='0.9' fill='rgb(200,255,240)' fill-opacity='0.5'/%3E%3Ccircle cx='213' cy='311' r='0.8' fill='rgb(255,255,255)' fill-opacity='0.74'/%3E%3Ccircle cx='586' cy='509' r='0.7' fill='rgb(255,255,255)' fill-opacity='0.51'/%3E%3Ccircle cx='5' cy='386' r='0.5' fill='rgb(255,255,255)' fill-opacity='0.57'/%3E%3Ccircle cx='410' cy='557' r='0.5' fill='rgb(255,200,230)' fill-opacity='0.4'/%3E%3Ccircle cx='170' cy='67' r='0.5' fill='rgb(255,200,230)' fill-opacity='0.53'/%3E%3Ccircle cx='413' cy='275' r='0.9' fill='rgb(255,255,255)' fill-opacity='0.54'/%3E%3Ccircle cx='444' cy='487' r='0.6' fill='rgb(255,200,230)' fill-opacity='0.48'/%3E%3Ccircle cx='30' cy='266' r='0.6' fill='rgb(255,255,255)' fill-opacity='0.63'/%3E%3Ccircle cx='36' cy='198' r='0.9' fill='rgb(255,255,255)' fill-opacity='0.44'/%3E%3Ccircle cx='329' cy='363' r='0.8' fill='rgb(255,255,255)' fill-opacity='0.6'/%3E%3Ccircle cx='596' cy='125' r='0.5' fill='rgb(255,200,230)' fill-opacity='0.6'/%3E%3Ccircle cx='543' cy='447' r='0.8' fill='rgb(255,255,255)' fill-opacity='0.5'/%3E%3Ccircle cx='542' cy='163' r='0.7' fill='rgb(255,200,230)' fill-opacity='0.43'/%3E%3Ccircle cx='223' cy='542' r='0.8' fill='rgb(255,255,255)' fill-opacity='0.69'/%3E%3Ccircle cx='139' cy='238' r='0.7' fill='rgb(200,255,240)' fill-opacity='0.6'/%3E%3Ccircle cx='185' cy='323' r='0.6' fill='rgb(255,200,230)' fill-opacity='0.48'/%3E%3Ccircle cx='223' cy='199' r='0.9' fill='rgb(255,255,255)' fill-opacity='0.4'/%3E%3Ccircle cx='90' cy='265' r='0.6' fill='rgb(255,228,196)' fill-opacity='0.39'/%3E%3Ccircle cx='431' cy='556' r='0.8' fill='rgb(200,255,240)' fill-opacity='0.4'/%3E%3Ccircle cx='18' cy='98' r='0.7' fill='rgb(255,255,255)' fill-opacity='0.58'/%3E%3Ccircle cx='369' cy='118' r='0.6' fill='rgb(200,255,240)' fill-opacity='0.55'/%3E%3Ccircle cx='514' cy='193' r='0.8' fill='rgb(255,255,255)' fill-opacity='0.54'/%3E%3Ccircle cx='564' cy='527' r='0.5' fill='rgb(255,200,230)' fill-opacity='0.54'/%3E%3Ccircle cx='117' cy='208' r='0.6' fill='rgb(255,255,255)' fill-opacity='0.69'/%3E%3Ccircle cx='97' cy='593' r='0.9' fill='rgb(255,255,255)' fill-opacity='0.4'/%3E%3Ccircle cx='79' cy='99' r='0.8' fill='rgb(190,215,255)' fill-opacity='0.51'/%3E%3Ccircle cx='363' cy='440' r='0.7' fill='rgb(255,255,255)' fill-opacity='0.59'/%3E%3Ccircle cx='41' cy='205' r='0.5' fill='rgb(255,255,255)' fill-opacity='0.51'/%3E%3Ccircle cx='379' cy='415' r='0.6' fill='rgb(255,255,255)' fill-opacity='0.59'/%3E%3Ccircle cx='15' cy='331' r='0.5' fill='rgb(255,255,255)' fill-opacity='0.67'/%3E%3Ccircle cx='414' cy='583' r='0.8' fill='rgb(255,200,230)' fill-opacity='0.43'/%3E%3Ccircle cx='349' cy='264' r='0.7' fill='rgb(190,215,255)' fill-opacity='0.71'/%3E%3Ccircle cx='163' cy='415' r='1.3' fill='rgb(255,255,255)' fill-opacity='0.91'/%3E%3Ccircle cx='378' cy='442' r='1.4' fill='rgb(255,255,255)' fill-opacity='0.71'/%3E%3Ccircle cx='72' cy='349' r='1.3' fill='rgb(190,215,255)' fill-opacity='0.74'/%3E%3Ccircle cx='364' cy='50' r='1.0' fill='rgb(255,255,255)' fill-opacity='0.66'/%3E%3Ccircle cx='306' cy='345' r='1.4' fill='rgb(255,255,255)' fill-opacity='0.81'/%3E%3Ccircle cx='545' cy='78' r='1.2' fill='rgb(255,228,196)' fill-opacity='0.76'/%3E%3Ccircle cx='218' cy='122' r='1.2' fill='rgb(255,228,196)' fill-opacity='0.94'/%3E%3Ccircle cx='110' cy='242' r='1.0' fill='rgb(190,215,255)' fill-opacity='0.73'/%3E%3Ccircle cx='200' cy='384' r='1.2' fill='rgb(255,255,255)' fill-opacity='0.59'/%3E%3Ccircle cx='349' cy='563' r='1.1' fill='rgb(255,200,230)' fill-opacity='0.75'/%3E%3Ccircle cx='581' cy='102' r='1.4' fill='rgb(200,255,240)' fill-opacity='0.73'/%3E%3Ccircle cx='562' cy='46' r='1.3' fill='rgb(255,228,196)' fill-opacity='0.92'/%3E%3Ccircle cx='483' cy='173' r='1.1' fill='rgb(255,228,196)' fill-opacity='0.77'/%3E%3Ccircle cx='439' cy='506' r='1.2' fill='rgb(255,228,196)' fill-opacity='0.66'/%3E%3Ccircle cx='319' cy='374' r='1.2' fill='rgb(255,200,230)' fill-opacity='0.66'/%3E%3Ccircle cx='574' cy='290' r='1.3' fill='rgb(200,255,240)' fill-opacity='0.84'/%3E%3Ccircle cx='14' cy='250' r='1.1' fill='rgb(255,200,230)' fill-opacity='0.57'/%3E%3Ccircle cx='399' cy='54' r='1.1' fill='rgb(190,215,255)' fill-opacity='0.85'/%3E%3Ccircle cx='326' cy='75' r='1.0' fill='rgb(255,255,255)' fill-opacity='0.72'/%3E%3Ccircle cx='249' cy='46' r='1.2' fill='rgb(255,200,230)' fill-opacity='0.59'/%3E%3Ccircle cx='479' cy='147' r='1.3' fill='rgb(255,255,255)' fill-opacity='0.79'/%3E%3Ccircle cx='427' cy='466' r='1.0' fill='rgb(255,255,255)' fill-opacity='0.63'/%3E%3Ccircle cx='540' cy='158' r='1.0' fill='rgb(255,255,255)' fill-opacity='0.7'/%3E%3Ccircle cx='426' cy='466' r='1.1' fill='rgb(255,200,230)' fill-opacity='0.65'/%3E%3Ccircle cx='429' cy='372' r='1.2' fill='rgb(200,255,240)' fill-opacity='0.76'/%3E%3Ccircle cx='297' cy='131' r='1.4' fill='rgb(255,255,255)' fill-opacity='0.74'/%3E%3Ccircle cx='316' cy='519' r='1.2' fill='rgb(255,200,230)' fill-opacity='0.89'/%3E%3Ccircle cx='578' cy='194' r='1.1' fill='rgb(200,255,240)' fill-opacity='0.66'/%3E%3Ccircle cx='254' cy='514' r='1.1' fill='rgb(200,255,240)' fill-opacity='0.92'/%3E%3Ccircle cx='40' cy='62' r='1.4' fill='rgb(255,255,255)' fill-opacity='0.66'/%3E%3Ccircle cx='38' cy='104' r='1.2' fill='rgb(255,255,255)' fill-opacity='0.77'/%3E%3Ccircle cx='88' cy='164' r='1.0' fill='rgb(255,200,230)' fill-opacity='0.64'/%3E%3Ccircle cx='495' cy='490' r='1.4' fill='rgb(190,215,255)' fill-opacity='0.63'/%3E%3Ccircle cx='136' cy='76' r='1.1' fill='rgb(255,255,255)' fill-opacity='0.73'/%3E%3C/svg%3E") 0 0 / 600px 600px;
@@ -548,7 +528,6 @@ html::after {
     to { opacity: 1; }
 }
 
-/* Comet Club: two shooting stars, borrowed from the footer's pseudo-elements */
 html[data-variant='comet'] .footer::before,
 html[data-variant='comet'] .footer::after {
     content: '';
@@ -581,22 +560,12 @@ html[data-variant='comet'] .footer::after {
     3.6%, 100% { transform: translate(64vw, 31vw) rotate(26deg); opacity: 0; }
 }
 
-/* ---------- Header and the moon ----------
-   The header carries the background so the moon (header::before, z-index -1) can
-   sit above it and below the nav. The header's bottom edge is the horizon; the
-   moon rises out of it, in the secondary nav's empty right-hand column. */
 body > header {
     background: none;
     border-bottom: 1px solid var(--ms-line);
     box-shadow: 0 12px 30px -20px var(--ms-glow);
 }
 
-/* The header's backing is a copy of the sky itself. It keeps content from showing
-   through the pinned nav without breaking the nebula. No fixed attachment: that made
-   the browser repaint the header on every scroll frame (25x the raster work on long
-   forum pages). The pinned header sits at the viewport's top-left, so sizing the
-   gradients to the viewport (100% x 100vh from 0 0) lines them up with html::before
-   and the star layers anyway.  */
 body > header::after {
     content: '';
     position: absolute;
@@ -610,14 +579,6 @@ body > header::after {
         linear-gradient(180deg, var(--ms-sky-top), var(--ms-sky-bottom)) 0 0 / 100% 100vh no-repeat;
 }
 
-/* At the top of the page the copy is hidden, so the real sky (small stars
-   included) runs straight through the banner and nav. It fades in over the first
-   80px of scrolling, before any content can slide under the pinned header.
-   Browsers without scroll-driven animations show the copy all the time. */
-/* Longhands, and only where animation-range is understood too: Safari applied the
-   timeline but spread the fade over the whole page (still see-through at the home
-   page's chat box, solid almost at once on shorter pages). A browser that can't
-   limit the range keeps the always-on backing instead. */
 @supports (animation-timeline: scroll()) and (animation-range: 0px 80px) {
     body > header::after {
         opacity: 0;
@@ -634,13 +595,6 @@ body > header::after {
     }
 }
 
-/* The two twinkling star layers, copied into the header on their own elements so they
-   keep twinkling over the backing. Same tiles, positions, glow and animations as
-   body::after / html::after; all are created at page load, so they run in step and
-   a star carries on from wherever it was in its blink. Opacity is the twinkle, so
-   the scroll fade-in is done with filter: opacity() instead. .top-nav is not
-   positioned, so these fill the header; z -2 puts them over the backing (-3) and
-   under the moon (-1). */
 body > header > .top-nav::before,
 body > header > .top-nav::after {
     content: '';
@@ -649,7 +603,7 @@ body > header > .top-nav::after {
     z-index: -2;
     pointer-events: none;
     will-change: opacity;
-    filter: opacity(1); /* the glow is baked into the tiles; opacity() stays compositable */
+    filter: opacity(1);
 }
 body > header > .top-nav::before {
     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='640'%3E%3Cdefs%3E%3Cfilter id='g' x='-10%25' y='-10%25' width='120%25' height='120%25'%3E%3CfeDropShadow dx='0' dy='0' stdDeviation='1.5' flood-color='rgb(230,236,255)' flood-opacity='.8'/%3E%3C/filter%3E%3C/defs%3E%3Cg filter='url(%23g)'%3E%3Ccircle cx='218' cy='455' r='2.0' fill='rgb(255,228,196)' fill-opacity='0.96'/%3E%3Ccircle cx='154' cy='377' r='1.8' fill='rgb(255,255,255)' fill-opacity='0.95'/%3E%3Ccircle cx='333' cy='297' r='2.1' fill='rgb(255,200,230)' fill-opacity='0.96'/%3E%3Ccircle cx='188' cy='437' r='2.0' fill='rgb(200,255,240)' fill-opacity='0.91'/%3E%3Ccircle cx='331' cy='80' r='1.6' fill='rgb(255,200,230)' fill-opacity='0.86'/%3E%3Ccircle cx='496' cy='474' r='1.9' fill='rgb(190,215,255)' fill-opacity='0.97'/%3E%3Ccircle cx='317' cy='218' r='1.6' fill='rgb(200,255,240)' fill-opacity='0.94'/%3E%3Ccircle cx='506' cy='335' r='1.9' fill='rgb(190,215,255)' fill-opacity='0.98'/%3E%3Ccircle cx='334' cy='375' r='1.7' fill='rgb(255,255,255)' fill-opacity='0.9'/%3E%3Ccircle cx='609' cy='285' r='1.8' fill='rgb(255,228,196)' fill-opacity='0.93'/%3E%3Ccircle cx='469' cy='325' r='2.1' fill='rgb(255,255,255)' fill-opacity='0.91'/%3E%3Ccircle cx='528' cy='254' r='2.1' fill='rgb(255,255,255)' fill-opacity='0.9'/%3E%3Cpath transform='translate(382 415) scale(0.48)' d='M12 0C13 8 16 11 24 12 16 13 13 16 12 24 11 16 8 13 0 12 8 11 11 8 12 0Z' fill='rgb(255,228,196)'/%3E%3Cpath transform='translate(587 387) scale(0.63)' d='M12 0C13 8 16 11 24 12 16 13 13 16 12 24 11 16 8 13 0 12 8 11 11 8 12 0Z' fill='rgb(255,228,196)'/%3E%3Cpath transform='translate(615 586) scale(0.54)' d='M12 0C13 8 16 11 24 12 16 13 13 16 12 24 11 16 8 13 0 12 8 11 11 8 12 0Z' fill='rgb(255,255,255)'/%3E%3Cpath transform='translate(475 298) scale(0.41)' d='M12 0C13 8 16 11 24 12 16 13 13 16 12 24 11 16 8 13 0 12 8 11 11 8 12 0Z' fill='rgb(255,255,255)'/%3E%3Cpath transform='translate(69 567) scale(0.43)' d='M12 0C13 8 16 11 24 12 16 13 13 16 12 24 11 16 8 13 0 12 8 11 11 8 12 0Z' fill='rgb(255,255,255)'/%3E%3Cpath transform='translate(32 442) scale(0.55)' d='M12 0C13 8 16 11 24 12 16 13 13 16 12 24 11 16 8 13 0 12 8 11 11 8 12 0Z' fill='rgb(255,255,255)'/%3E%3C/g%3E%3C/svg%3E") 0 0 / 640px 640px;
@@ -693,15 +647,12 @@ body > header::before {
     background-position: right var(--ms-moon-x) bottom calc(var(--ms-moon-peek) - var(--ms-moon-size));
 }
 
-/* Phones: the secondary nav fills the width, so the moon hangs from the header's
-   top edge instead, between the site title and the menu button. */
 @media (max-width: 767px) {
     body > header::before {
         background-size: 72px 72px;
         background-position: right 46px top -28px;
     }
 }
-
 
 .top-nav,
 .secondary-nav {
@@ -710,11 +661,10 @@ body > header::before {
 
 .secondary-nav {
     border-top: 1px solid var(--ms-line);
-    /* keep the strip even on pages with no breadcrumbs or tabs: it is where the moon rises */
+
     min-height: 44px;
 }
 
-/* Brand: the favicon swaps for a crescent, the site title goes moonlight */
 .top-nav__branding img {
     display: none;
 }
@@ -730,9 +680,7 @@ body > header::before {
     transform: rotate(-14deg) scale(1.1);
 }
 .top-nav__branding .top-nav__site-logo {
-    /* UNIT3D prints the title as one text node, so it is hidden and redrawn in
-       two parts to colour "Scene" separately. Update both strings if the site
-       is renamed. (!important: UNIT3D's phone rules set a font-size here too.) */
+
     font-size: 0 !important;
     background: none;
     -webkit-text-fill-color: currentColor;
@@ -765,16 +713,10 @@ body > header::before {
     }
 }
 
-/* Footer: UNIT3D repeats the favicon + title here (same .top-nav__site-logo span),
-   so the raw text is hidden the same way and the redrawn title shows instead. */
 .footer__section-title .top-nav__site-logo {
     font-size: 0;
 }
 
-/* Bubble Nebula: the title is a wordmark image (assets.py WORDMARK_FILE; now v3, the
-   outlined Nunito SVG from wordmark_svg.py, 6.1:1). Its crescent replaces the favicon.
-   Sizes are for v3; the painted v1/v2 PNGs were ~3:1 and needed 216x72 with
-   margin-block -12px to spill over the 48px nav row. */
 :root .top-nav__branding::before,
 :root .footer__section-title img {
     display: none;
@@ -791,15 +733,9 @@ body > header::before {
     height: 68px;
     background: url(data:image/webp;base64,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) center / contain no-repeat;
 }
-/* Size the header logo's box to exactly the 48px row with margin-block (negative
-   when the logo is taller, positive when shorter), so the row never grows or shrinks.
-   What spills above the row is given back as header padding, or the top of the logo
-   is cut off by the window edge whenever nothing (the freeleech banner) sits above
-   the header, and always once the header pins to the top. */
+
 :root .top-nav__branding .top-nav__site-logo {
-    /* v5's lettering sits at 58% of the image height (sparkles above, film strip
-       below), so the logo is lifted until the lettering, not the image, is centred on
-       the row like the search box: top = 24px - 0.58 x height; the box stays 48px */
+
     margin-block: -15px -5px;
 }
 :root .top-nav {
@@ -810,15 +746,14 @@ body > header::before {
     width: 270px;
     height: 77px;
 }
-/* 768-1400px: the nav links move into the same row, so the logo gives the
-   search a little more room. */
+
 @media (min-width: 767px) and (max-width: 1400px) {
     :root .top-nav__branding .top-nav__site-logo {
         width: 196px;
         height: 56px;
         margin-block: -8px 0;
     }
-    /* here the ratio bar has its own row above the logo, which takes the spill */
+
     :root .top-nav {
         --ms-nav-pad: 0px;
     }
@@ -834,9 +769,6 @@ body > header::before {
     }
 }
 
-/* UNIT3D opens the main-menu and icon-bar dropdowns at a fixed distance from the top
-   of the header (43px; 67px when the ratio bar takes its own row) rather than off
-   their link, so padding added above the nav row must be added here too. */
 .top-nav__dropdown > ul {
     top: calc(43px + var(--ms-nav-pad, 0px));
 }
@@ -846,7 +778,6 @@ body > header::before {
     }
 }
 
-/* Main menus: pills that bounce */
 .top-nav__dropdown > a {
     border-radius: 999px;
     color: var(--ms-muted);
@@ -863,7 +794,6 @@ body > header::before {
     box-shadow: 0 20px 40px -18px rgba(0, 0, 0, 0.85);
 }
 
-/* Ratio bar and icon bar */
 .top-nav__ratio-bar a,
 .top-nav--right__icon-link {
     border-radius: 999px;
@@ -885,7 +815,6 @@ body > header::before {
     transform: scale(1.06);
 }
 
-/* Quick search: input corners (--ms-r-input) match the torrent search form, glowing, posters get rounded corners */
 .quick-search__input {
     border-radius: var(--ms-r-input);
     border: 1px solid var(--ms-line);
@@ -898,17 +827,12 @@ body > header::before {
     box-shadow: 0 0 0 4px var(--ms-glow);
     outline: none;
 }
-/* The quick search used to stretch to the full 48px nav row; a 36px box sits centred
-   in it instead (the input and results are positioned off .quick-search's height). */
+
 .quick-search {
     align-self: center;
     height: 36px;
 }
-/* UNIT3D widens the input to 400px on focus and squares its bottom corners so the
-   results can hang off it; with rounded corners that bent into an arch over the
-   menus. Here the box keeps the same corners as the other search inputs and only grows when it is narrower than
-   240px (turning solid so the menus do not show through); results open as their
-   own card just below. */
+
 .quick-search:focus-within .quick-search__inputs,
 .quick-search:active .quick-search__inputs {
     width: max(100%, 240px);
@@ -927,9 +851,7 @@ body > header::before {
     border: 1px solid var(--ms-line);
     box-shadow: 0 24px 50px -20px rgba(0, 0, 0, 0.9);
 }
-/* Safari (macOS) does not focus a link when it is clicked, so pressing a result blurs
-   the input, UNIT3D's :focus-within/:active rule hides the results, and the click
-   never lands. Keep them shown while the pointer is over them. */
+
 .quick-search .quick-search__inputs .quick-search__results:hover {
     display: block;
 }
@@ -950,7 +872,6 @@ body > header::before {
     color: var(--ms-muted);
 }
 
-/* Secondary nav: breadcrumbs and a pill tab group */
 .breadcrumb__link,
 .breadcrumbV2 {
     color: var(--ms-muted);
@@ -958,12 +879,10 @@ body > header::before {
 .breadcrumb--active {
     color: var(--ms-text);
 }
-/* Tab group: same corners as the search inputs, with the tabs inset concentrically
-   (outer radius minus the 3px padding), and room above and below so the outline
-   does not touch the header's divider lines. */
+
 .nav-tabsV2 {
     padding: 3px;
-    gap: 3px; /* same as the padding, so a pill and a hovered outline never touch */
+    gap: 3px;
     margin-block: 6px;
     border-radius: var(--ms-r-input);
     background: rgba(0, 0, 0, 0.28);
@@ -990,10 +909,6 @@ body > header::before {
     font-weight: 650;
 }
 
-/* Tab strip: the current tab is always the solid pink pill (kept on hover too: UNIT3D
-   blanks the active tab's background on hover). Any other tab under the pointer gets
-   a pink outline instead, and keeps it while its menu is open (the pointer is still
-   inside that tab's <li>). Nothing on the current tab changes, so nothing snaps. */
 .nav-tabsV2 > li:hover > .nav-tab--active__link {
     color: var(--ms-accent-ink);
     background: var(--ms-accent);
@@ -1002,13 +917,10 @@ body > header::before {
 .nav-tabsV2 > li:has(:focus-visible) > .nav-tab__link {
     color: var(--ms-text);
     background: transparent;
-    /* same muted pink, same 1px as a hovered search box or select */
+
     box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ms-accent) 50%, transparent);
 }
 
-/* Inside a tab's menu: items only get the quiet purple hover. The current page (e.g.
-   History under Torrents) carries the active-tab class; it was a pink pill that
-   UNIT3D blanks on hover, so it flashed. Here it is just bold, purple on hover. */
 .nav-tab-menu__items .nav-tab--active__link {
     color: var(--ms-text);
     background: transparent;
@@ -1018,12 +930,6 @@ body > header::before {
     background: rgba(255, 255, 255, 0.06);
 }
 
-/* Profile tab menus (Activity, Torrents, ...). UNIT3D opens them at a fixed 75px
-   from the top of the header, which misses the tabs whenever the header is a
-   different height (ratio bar on its own row, the taller tab strip here, narrow
-   screens), so the menu covers its tab or leaves a gap that drops the hover.
-   Hang each menu off its own tab instead. That needs the tab strip to stop being
-   a sideways-scrolling box (it would clip the menus), so the tabs wrap instead. */
 .nav-tabsV2 {
     overflow: visible;
     flex-wrap: wrap;
@@ -1042,8 +948,6 @@ body > header::before {
     height: 8px;
 }
 
-/* Freeleech banner: no box, centred blue text between two sparkles.
-   UNIT3D's own wording and globe emoji are kept; the countdown sits underneath. */
 .special-event-alert {
     background: none;
     border: 0;
@@ -1078,7 +982,7 @@ body > header::before {
     content: '';
     width: 16px;
     height: 16px;
-    /* sparkle shape as a mask so it takes the banner colour of each variant */
+
     background: var(--ms-banner);
     -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 0C13 8 16 11 24 12 16 13 13 16 12 24 11 16 8 13 0 12 8 11 11 8 12 0Z' fill='%23fff'/%3E%3C/svg%3E") center / contain no-repeat;
     mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 0C13 8 16 11 24 12 16 13 13 16 12 24 11 16 8 13 0 12 8 11 11 8 12 0Z' fill='%23fff'/%3E%3C/svg%3E") center / contain no-repeat;
@@ -1120,7 +1024,6 @@ body > header::before {
     color: var(--ms-muted);
 }
 
-/* Icon buttons: round, spring on hover, squish on press */
 .form__standard-icon-button,
 .form__contained-icon-button {
     border-radius: 50%;
@@ -1152,8 +1055,6 @@ body > header::before {
     transition: transform 0.28s var(--ms-spring);
 }
 
-/* Skinny icon buttons (chatbox bell/keyboard etc.) are tall and narrow, so the
-   round ring above turns into a thin oval. Keep them plain: icon tint only. */
 .form__standard-icon-button--skinny,
 .form__standard-icon-button--skinny:hover {
     border: 0;
@@ -1166,7 +1067,6 @@ body > header::before {
     color: var(--ms-accent);
 }
 
-/* The filled magnet button gets the sparkle */
 .form__contained-icon-button--filled {
     position: relative;
     color: var(--ms-accent-ink);
@@ -1226,15 +1126,10 @@ body > header::before {
     border-top: 1px solid var(--ms-line);
 }
 
-/* News posts with no picture show the site's /img/missing-image.png (the only place
-   UNIT3D uses it; the src is an absolute URL). It is only a placeholder, so hide it;
-   uploaded pictures still show. */
 .article-preview__image[src$="/img/missing-image.png"] {
     display: none;
 }
 
-/* Page numbers have no hover colour of their own, so they fell through to the generic
-   link hover (teal, --color-light-blue). Match the pink current-page pill instead. */
 .pagination__link:hover,
 .pagination__previous:not(.pagination__previous--disabled):hover,
 .pagination__next:not(.pagination__next--disabled):hover,
@@ -1243,13 +1138,6 @@ body > header::before {
     color: var(--ms-accent);
 }
 
-
-/* ---------- Torrent-row icons (mockups/torrent-icons.html, Set A) ----------
-   UNIT3D's own Font Awesome glyphs, recoloured (via --torrent-row-*-fg) with a soft glow.
-   Only the ones that matter move, slowly, and only as a whole glyph (a font icon has no
-   parts to animate): freeleech breathes, internal and high speeds glow, double upload
-   drifts up, featured glints. The rest stay still. (Set C's drawn icons were tried
-   and dropped: the comet read as a blinking dot at row size.) */
 .torrent-icons__freeleech,
 .torrent-icons__internal,
 .torrent-icons__highspeed,
@@ -1273,8 +1161,7 @@ body > header::before {
 .torrent-icons__featured {
     animation: ms-icon-glint 6s ease-in-out infinite;
 }
-/* Only opacity and transform move: animating filter repainted every icon every frame
-   (a 50-row freeleech list never went idle). The drop-shadow glow above is static. */
+
 @keyframes ms-icon-breathe {
     from { opacity: 0.8; transform: scale(1); }
     to { opacity: 1; transform: scale(1.1); }
@@ -1302,14 +1189,6 @@ body > header::before {
     .torrent-icons__featured { animation: none; }
 }
 
-/* ---------- One content width for every page ----------
-   Every page uses the torrents page's filter-box margins, max(12px, 45vw - 600px) from
-   each screen edge (user's preferred look), instead of UNIT3D's own curve
-   (max(0px, 10vw - 60px, 25vw - 300px, 45vw - 800px)). Only the outer edges change:
-   two-column pages (main + sidebar) keep UNIT3D's split inside that width.
-   UNIT3D's break-outs (lists/filters with margins that undo its main margins, sized to
-   their table) are cancelled so nothing pokes past the edges; wide tables scroll inside
-   their panels. (UNIT3D's phone overrides use max(0, ...) and are dropped as invalid.) */
 main {
     margin-inline: max(12px, 45vw - 600px);
 }
@@ -1336,8 +1215,7 @@ main .trending--weekly {
 }
 
 /* ---------- Review fixes (2026-09-19) ---------- */
-/* Torrent detail page: flat menu and chip tints (see the meta variables), and chips no
-   longer each hold a backdrop-filter layer. */
+
 .meta__dropdown {
     background: var(--ms-surface-solid);
 }
@@ -1347,18 +1225,14 @@ main .trending--weekly {
 .meta-chip:hover {
     background: var(--meta-chip-hover-bg);
 }
-/* The detail page's blurred backdrop is placed 72px from the top of the PAGE (main is not
-   positioned), i.e. inside the see-through header. Hang it off main instead. */
+
 main {
     position: relative;
 }
 .meta__backdrop {
     top: 0;
 }
-/* ...but UNIT3D's pagination dividers (1px lines beside Previous / Next, position:absolute
-   with left/right: 0) relied on nothing being positioned: with main positioned they
-   landed at main's top corners, beside the search box, as clickable slivers. Anchor
-   them to their own buttons, where UNIT3D meant them. */
+
 .pagination__previous,
 .pagination__next {
     position: relative;
@@ -1369,14 +1243,12 @@ main {
 .meta-chip__value {
     font-family: inherit;
 }
-/* Fullscreen chat covers the page: solid, square. */
+
 .chatbox--fullscreen {
     background-color: var(--ms-surface-solid);
     border-radius: 0;
 }
-/* At 1100px and below UNIT3D folds panel actions into a "..." menu that opens downwards;
-   the panels' overflow: hidden cut it off in short panels, so let those overflow, and
-   give the open menu a solid surface. */
+
 @media (max-width: 1100px) {
     .panelV2:has(> .panel__header > .panel__actions) {
         overflow: visible;
@@ -1385,29 +1257,25 @@ main {
     .panel__actions:focus-within {
         background: var(--ms-surface-solid);
     }
-    /* UNIT3D positions every panel header at this width, so the next panel's header drew
-       over the open menu (also in stock UNIT3D); lift the menu above them, but stay under
-       the pinned header (z-index 10) or it shows through it when scrolled underneath */
+
     .panel__actions {
         z-index: 2;
     }
 }
-/* Floating labels inside a panel header sat on the body colour (a dark notch). */
+
 .panel__actions .form__label--floating {
     background: color-mix(in srgb, var(--ms-surface-head), var(--ms-surface-solid) 40%);
 }
-/* Focus rings at a panel's edge were clipped by its overflow. */
+
 .panel__header :focus-visible {
     outline-offset: -2px;
 }
-/* UNIT3D brightens tabs on hover (filter); the current tab should not change. */
+
 .nav-tab__link:hover,
 .nav-tab--active__link:hover {
     filter: none;
 }
-/* Current page number: a muted pink tint, smaller than its 40px slot (the full-size solid
-   pink block was loud); the slot keeps its size so the numbers don't shift. The tint is
-   the background clipped to the content box, 5px in from each side. */
+
 .pagination__current {
     box-sizing: border-box;
     padding: 5px;
@@ -1417,11 +1285,11 @@ main {
     border-radius: 12px;
     color: var(--ms-accent);
 }
-/* Category icons (sites that use icon categories) were hardcoded navy. */
+
 .category__icon {
     color: var(--ms-muted);
 }
-/* Virtual-select (Regions / Distributors torrent filters) ships white. */
+
 .vscomp-wrapper {
     color: var(--ms-text);
 }
@@ -1439,14 +1307,13 @@ main {
     border-right-color: var(--ms-muted);
     border-bottom-color: var(--ms-muted);
 }
-/* Phone menu: sub-lists are inline there, not dropdowns. */
+
 .top-nav__main-menus.mobile .top-nav__dropdown > ul,
 .top-nav__icon-bar.mobile .top-nav__dropdown > ul {
     border: 0;
     border-radius: 0;
 }
-/* Phones: the wrapped tab strip made the pinned header ~200px tall on profile pages, so
-   the header scrolls away with the page there; tab menus stay on screen. */
+
 @media (max-width: 767px) {
     body > header {
         position: static;
@@ -1460,12 +1327,6 @@ main {
     }
 }
 
-/* Compact search bars (torrents, requests, similar torrents...): the frame had 5px padding
-   and 8px corners around a 14px-cornered input, so the left edge read as a thick,
-   uneven band; the round 48px filter button was taller than the 40px input, poked out
-   of the frame (overflow: hidden) and was cut off, worst when it scaled up on hover.
-   Now the frame is an even 6px around the input with concentric corners (input + 6px),
-   and the button is a 40px square with the input's corners, beside it, no scaling. */
 .compact-search {
     --compact-search-padding: 6px;
     border-radius: calc(var(--ms-r-input) + 6px);
@@ -1493,11 +1354,6 @@ main {
     transform: none;
 }
 
-/* Round icon buttons in tight rows (panel header bars, e.g. the chat's fullscreen button,
-   and torrent-card footers): padding + icon made them ~44px in a ~48px bar, and the
-   12% hover spring pushed them past the panel's clipped edge (also in fullscreen chat,
-   which is the same panel); card-footer buttons (43px) overflowed their 40px footer.
-   Fixed 34px circles with the icon centred, no spring; the hover colour still applies. */
 .panel__header .form__standard-icon-button:not(.form__standard-icon-button--skinny),
 .torrent-card__footer .form__standard-icon-button {
     display: inline-grid;
@@ -1507,9 +1363,7 @@ main {
     padding: 0;
     flex: none;
 }
-/* UNIT3D pulls the card footer's button area 12px up and down, 2px past the footer's 10px
-   padding, so its buttons always started above the (clipped) footer edge: span exactly
-   the footer's height and centre them. */
+
 .torrent-card__right-footer {
     display: flex;
     align-items: center;
@@ -1522,9 +1376,6 @@ main {
     transform: none;
 }
 
-/* Buttons that are links (e.g. the torrent page's moderation "Edit") took the generic teal
-   link hover; keep them the same colour as real buttons. Outlined buttons get the theme's
-   hover outline (the muted pink of hovered inputs and tabs) instead of only brightening. */
 a.form__button--outlined:hover { color: var(--button-outlined-fg); }
 a.form__button--filled:hover { color: var(--button-filled-fg); }
 a.form__button--text:hover { color: var(--button-text-fg); }
@@ -1561,7 +1412,6 @@ a.form__button--text:hover { color: var(--button-text-fg); }
 .text-info { color: var(--ms-accent-2) !important; }
 .text-gold, .text-orange { color: var(--ms-free) !important; }
 
-/* Top users rank badge (hardcoded red ring in UNIT3D) */
 .top-users__place {
     background: var(--ms-surface-head);
     border-color: var(--ms-accent);
