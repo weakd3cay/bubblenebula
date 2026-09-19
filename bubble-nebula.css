@@ -1355,6 +1355,14 @@ main {
 .meta__backdrop {
     top: 0;
 }
+/* ...but UNIT3D's pagination dividers (1px lines beside Previous / Next, position:absolute
+   with left/right: 0) relied on nothing being positioned: with main positioned they
+   landed at main's top corners, beside the search box, as clickable slivers. Anchor
+   them to their own buttons, where UNIT3D meant them. */
+.pagination__previous,
+.pagination__next {
+    position: relative;
+}
 .meta__title,
 .meta__heading,
 .meta-chip__name,
