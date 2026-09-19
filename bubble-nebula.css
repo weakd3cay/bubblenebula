@@ -1302,20 +1302,27 @@ body > header::before {
     .torrent-icons__featured { animation: none; }
 }
 
-/* Profile list pages (My uploads, torrent history, peers, resurrections) had three panel
-   widths: UNIT3D's filters (their own margins), the list (break-out, sized to its table)
-   and the page's own statistics panel (normal page width). On these pages the whole
-   page gets one width instead (the torrents page's filter-box margins), and the
-   break-out rules are cancelled, so every panel shares the same edges; a wide table
-   scrolls inside its panel. */
-main:has(.user-torrents, .user-uploads, .user-peers, .user-resurrections, .trending--weekly) {
-    /* the torrents page's filter-box width, so every wide list shares one look */
+/* ---------- One content width for every page ----------
+   Every page uses the torrents page's filter-box margins, max(12px, 45vw - 600px) from
+   each screen edge (user's preferred look), instead of UNIT3D's own curve
+   (max(0px, 10vw - 60px, 25vw - 300px, 45vw - 800px)). Only the outer edges change:
+   two-column pages (main + sidebar) keep UNIT3D's split inside that width.
+   UNIT3D's break-outs (lists/filters with margins that undo its main margins, sized to
+   their table) are cancelled so nothing pokes past the edges; wide tables scroll inside
+   their panels. (UNIT3D's phone overrides use max(0, ...) and are dropped as invalid.) */
+main {
     margin-inline: max(12px, 45vw - 600px);
 }
 main .user-torrents__filters,
 main .user-uploads__filters,
 main .user-peers__filters,
 main .user-resurrections__filters,
+main .request-search__filters,
+main .similar-torrents__filters,
+main .torrent-search__filters,
+main .torrent-search__filters:has(+ .torrent-search__results .torrent-search--grouped__results),
+main .page__torrents:not(:has(.torrent-search--grouped__results)),
+main .torrent-search__results,
 main .user-torrents,
 main .user-uploads,
 main .user-peers,
@@ -1434,18 +1441,6 @@ main {
         left: auto;
         right: 0;
     }
-}
-
-/* Torrents page (test, 2026-09-19): the results list takes the filter box's width instead
-   of running almost edge to edge, so the two line up and more of the sky shows. UNIT3D
-   gives the filters max(12px, 45vw - 600px) side margins inside the break-out (list view)
-   and a different formula in the grouped view; the results only had 12px. Phones: 12px
-   for both (UNIT3D's phone override is invalid CSS and dropped). */
-.page__torrents:not(:has(.torrent-search--grouped__results)) > .torrent-search__results {
-    margin-inline: max(12px, 45vw - 600px);
-}
-.page__torrents:has(.torrent-search--grouped__results) > .torrent-search__results {
-    margin-inline: calc(-1 * max(0px, 45vw - 800px) + max(12px, 45vw - 600px));
 }
 
 /* ---------- Colours UNIT3D hardcodes outside its variables ---------- */
