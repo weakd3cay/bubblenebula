@@ -1,17 +1,3 @@
-/* ==========================================================================
-   A starry, bubbly theme for UNIT3D
-   Load as the user's "Custom CSS" on top of a dark built-in theme (Galactic),
-   or fold into a standalone stylesheet. Written against UNIT3D's real markup:
-     html::before   sky gradient + nebula
-     html::after    sparkle set B (twinkles out of phase with A)
-     body::before   small-star field (static)
-     body::after    bright stars + sparkle set A (twinkle)
-     header::before the moon, rising out of the header's bottom edge
-     .footer::before / ::after   shooting stars (Comet Club only)
-   Variants are switched with html[data-variant] in the mockup only; a shipped
-   file keeps one variant's tokens in :root.
-   ========================================================================== */
-
 /* ---------- Variant tokens ---------- */
 :root {
 
