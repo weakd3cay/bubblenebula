@@ -1443,6 +1443,39 @@ main {
     }
 }
 
+/* Compact search bars (torrents, requests, similar torrents...): the frame had 5px padding
+   and 8px corners around a 14px-cornered input, so the left edge read as a thick,
+   uneven band; the round 48px filter button was taller than the 40px input, poked out
+   of the frame (overflow: hidden) and was cut off, worst when it scaled up on hover.
+   Now the frame is an even 6px around the input with concentric corners (input + 6px),
+   and the button is a 40px square with the input's corners, beside it, no scaling. */
+.compact-search {
+    --compact-search-padding: 6px;
+    border-radius: calc(var(--ms-r-input) + 6px);
+}
+.compact-search__visible-default {
+    align-items: center;
+    gap: 6px;
+    border-radius: var(--ms-r-input);
+}
+.compact-search__visible-default > .form__group {
+    flex: 1;
+    margin: 0;
+}
+.compact-search__visible-default .form__standard-icon-button {
+    flex: none;
+    display: inline-grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: var(--ms-r-input);
+}
+.compact-search__visible-default .form__standard-icon-button:hover,
+.compact-search__visible-default .form__standard-icon-button:active {
+    transform: none;
+}
+
 /* ---------- Colours UNIT3D hardcodes outside its variables ---------- */
 .panel__tab--active {
     color: var(--ms-accent);
