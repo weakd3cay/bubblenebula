@@ -304,7 +304,7 @@
     --post-shadow: var(--ms-shadow);
     --post-head-fg: var(--ms-text);
     --post-head-bg: var(--ms-surface-head);
-    --post-toolbar-bg: var(--ms-surface-head);
+    --post-toolbar-bg: transparent;
     --post-toolbar-fg: var(--ms-muted);
     --post-toolbar-hover-bg: var(--ms-hover);
     --post-toolbar-hover-fg: var(--ms-accent);
