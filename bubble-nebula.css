@@ -1463,6 +1463,97 @@ a.form__button--text:hover { color: var(--button-text-fg); }
     border-color: color-mix(in srgb, var(--ms-accent) 50%, transparent);
 }
 
+/* ---------- Leftover UNIT3D and Galactic colours ---------- */
+:root {
+    --comparison-divider-fg: var(--ms-text);
+    --comparison-button-fg: var(--ms-text);
+    --donation-chart-daily-bg: color-mix(in srgb, var(--ms-accent) 20%, transparent);
+    --donation-chart-daily-border: var(--ms-accent);
+    --donation-chart-monthly-bg: color-mix(in srgb, #c9b6ff 20%, transparent);
+    --donation-chart-monthly-border: #c9b6ff;
+}
+hr,
+.bbcode-input__icon-separator {
+    border-color: var(--ms-line);
+}
+.tooltip .tooltip-inner,
+.tooltip.popover .popover-inner {
+    background: var(--ms-surface-solid);
+    color: var(--ms-text);
+    border: 1px solid var(--ms-line);
+    border-radius: 8px;
+    box-shadow: 0 12px 30px -12px rgba(0, 0, 0, 0.85);
+}
+.tooltip .tooltip-arrow,
+.tooltip.popover .popover-arrow {
+    border-color: var(--ms-surface-solid);
+}
+.spinner__dots .dot {
+    background-color: var(--ms-accent);
+}
+.spinner__text {
+    color: var(--ms-accent);
+}
+.mediainfo h3 {
+    color: var(--ms-strong);
+}
+.trending-poster__download-count {
+    color: var(--ms-text);
+    background: var(--ms-surface-solid);
+    border-color: var(--ms-accent);
+}
+.application--pending { color: var(--ms-free); }
+.application--approved { color: var(--ms-up); }
+.application--rejected { color: var(--ms-down); }
+.text-blue { color: var(--ms-accent-2) !important; }
+.text-yellow,
+.text-warning { color: var(--ms-free) !important; }
+.text-pink { color: var(--ms-accent) !important; }
+.text-purple { color: #c9b6ff !important; }
+.page__error body {
+    background-color: transparent;
+    color: var(--ms-text);
+}
+.error__home-link,
+.page__error .error__home-link {
+    border-color: var(--ms-line);
+    color: var(--ms-text);
+}
+.error__home-link:hover,
+.page__error .error__home-link:hover {
+    border-color: color-mix(in srgb, var(--ms-accent) 50%, transparent);
+    color: var(--ms-accent);
+}
+.vscomp-clear-icon::before,
+.vscomp-clear-icon::after {
+    background-color: var(--ms-muted);
+}
+.vscomp-clear-button:hover {
+    background: var(--ms-hover);
+}
+.vscomp-clear-icon:hover::before,
+.vscomp-clear-icon:hover::after,
+.vscomp-clear-button:hover .vscomp-clear-icon::before,
+.vscomp-clear-button:hover .vscomp-clear-icon::after {
+    background-color: var(--ms-accent);
+}
+.vscomp-dropbox-close-button,
+.vscomp-options-loader::before,
+.pop-comp-wrapper,
+.pop-comp-arrow::before {
+    background-color: var(--ms-surface-solid);
+}
+.pop-comp-wrapper {
+    color: var(--ms-text);
+}
+.vscomp-new-option-icon::before {
+    border-color: var(--ms-accent);
+}
+.vscomp-option-description,
+.vscomp-search-clear {
+    color: var(--ms-muted);
+}
+
 /* ---------- Colours UNIT3D hardcodes outside its variables ---------- */
 .panel__tab--active {
     color: var(--ms-accent);
