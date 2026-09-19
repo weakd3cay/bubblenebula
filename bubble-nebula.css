@@ -1522,6 +1522,16 @@ main {
     transform: none;
 }
 
+/* Buttons that are links (e.g. the torrent page's moderation "Edit") took the generic teal
+   link hover; keep them the same colour as real buttons. Outlined buttons get the theme's
+   hover outline (the muted pink of hovered inputs and tabs) instead of only brightening. */
+a.form__button--outlined:hover { color: var(--button-outlined-fg); }
+a.form__button--filled:hover { color: var(--button-filled-fg); }
+a.form__button--text:hover { color: var(--button-text-fg); }
+.form__button--outlined:hover {
+    border-color: color-mix(in srgb, var(--ms-accent) 50%, transparent);
+}
+
 /* ---------- Colours UNIT3D hardcodes outside its variables ---------- */
 .panel__tab--active {
     color: var(--ms-accent);
