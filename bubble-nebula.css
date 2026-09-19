@@ -1451,6 +1451,18 @@ main {
     }
 }
 
+/* Torrents page (test, 2026-09-19): the results list takes the filter box's width instead
+   of running almost edge to edge, so the two line up and more of the sky shows. UNIT3D
+   gives the filters max(12px, 45vw - 600px) side margins inside the break-out (list view)
+   and a different formula in the grouped view; the results only had 12px. Phones: 12px
+   for both (UNIT3D's phone override is invalid CSS and dropped). */
+.page__torrents:not(:has(.torrent-search--grouped__results)) > .torrent-search__results {
+    margin-inline: max(12px, 45vw - 600px);
+}
+.page__torrents:has(.torrent-search--grouped__results) > .torrent-search__results {
+    margin-inline: calc(-1 * max(0px, 45vw - 800px) + max(12px, 45vw - 600px));
+}
+
 /* ---------- Colours UNIT3D hardcodes outside its variables ---------- */
 .panel__tab--active {
     color: var(--ms-accent);
