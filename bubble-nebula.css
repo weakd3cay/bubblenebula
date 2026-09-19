@@ -1432,12 +1432,16 @@ a.form__button--text:hover { color: var(--button-text-fg); }
 }
 
 .post__tip-input {
-    border-bottom-color: var(--ms-line);
+    border: 1px solid var(--ms-line);
+    border-radius: 999px;
+    padding: 2px 10px;
+    background: transparent;
 }
+.post__tip-input:hover,
 .post__tip-input:focus,
 .post__tip-input:focus-visible {
     outline: none;
-    border-bottom-color: var(--ms-accent);
+    border-color: color-mix(in srgb, var(--ms-accent) 50%, transparent);
 }
 
 /* ---------- Colours UNIT3D hardcodes outside its variables ---------- */
