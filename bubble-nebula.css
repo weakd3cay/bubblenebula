@@ -106,8 +106,8 @@
     --color-purple: color-mix(in srgb, var(--ms-accent), var(--ms-accent-2));
     --color-light-purple: color-mix(in srgb, var(--color-purple), white 20%);
     --color-dark-purple: color-mix(in srgb, var(--color-purple), black 55%);
-    --color-blue: var(--ms-accent-2);
-    --color-light-blue: color-mix(in srgb, var(--ms-accent-2), white 20%);
+    --color-blue: var(--ms-text);
+    --color-light-blue: var(--ms-accent);
     --color-dark-blue: color-mix(in srgb, var(--ms-accent-2), black 55%);
     --color-light-orange: var(--ms-free);
     --color-bright-white: #fff;
@@ -1367,6 +1367,36 @@ a.form__button--filled:hover { color: var(--button-filled-fg); }
 a.form__button--text:hover { color: var(--button-text-fg); }
 .form__button--outlined:hover {
     border-color: color-mix(in srgb, var(--ms-accent) 50%, transparent);
+}
+
+/* ---------- Forum lists and topic tags ---------- */
+.topic-listing__created-link,
+.topic-listing__latest-author-link,
+.topic-listing__latest-post-link {
+    color: var(--ms-muted);
+}
+.topic-listing__created-link:hover,
+.topic-listing__latest-author-link:hover,
+.topic-listing__latest-post-link:hover {
+    color: var(--ms-accent);
+}
+
+.topic-tag {
+    --forum-tag-approved-fg: var(--ms-up);
+    --forum-tag-approved-bg: color-mix(in srgb, var(--ms-up) 16%, transparent);
+    --forum-tag-denied-fg: var(--ms-down);
+    --forum-tag-denied-bg: color-mix(in srgb, var(--ms-down) 16%, transparent);
+    --forum-tag-solved-fg: #c9b6ff;
+    --forum-tag-solved-bg: color-mix(in srgb, #c9b6ff 16%, transparent);
+    --forum-tag-invalid-fg: var(--ms-free);
+    --forum-tag-invalid-bg: color-mix(in srgb, var(--ms-free) 16%, transparent);
+    --forum-tag-bug-fg: var(--ms-down);
+    --forum-tag-bug-bg: color-mix(in srgb, var(--ms-down) 16%, transparent);
+    --forum-tag-suggestion-fg: var(--ms-accent);
+    --forum-tag-suggestion-bg: color-mix(in srgb, var(--ms-accent) 16%, transparent);
+    --forum-tag-implemented-fg: var(--ms-accent-2);
+    --forum-tag-implemented-bg: color-mix(in srgb, var(--ms-accent-2) 16%, transparent);
+    border-radius: 6px;
 }
 
 /* ---------- Colours UNIT3D hardcodes outside its variables ---------- */
