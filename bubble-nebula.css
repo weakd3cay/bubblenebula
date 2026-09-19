@@ -1405,9 +1405,17 @@ main {
 .nav-tab--active__link:hover {
     filter: none;
 }
-/* Current page number: dark ink on the pink pill (was faint purple). */
+/* Current page number: a muted pink tint, smaller than its 40px slot (the full-size solid
+   pink block was loud); the slot keeps its size so the numbers don't shift. The tint is
+   the background clipped to the content box, 5px in from each side. */
 .pagination__current {
-    color: var(--ms-accent-ink);
+    box-sizing: border-box;
+    padding: 5px;
+    line-height: 30px;
+    background: color-mix(in srgb, var(--ms-accent) 22%, transparent);
+    background-clip: content-box;
+    border-radius: 12px;
+    color: var(--ms-accent);
 }
 /* Category icons (sites that use icon categories) were hardcoded navy. */
 .category__icon {
