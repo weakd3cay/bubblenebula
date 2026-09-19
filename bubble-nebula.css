@@ -1421,10 +1421,21 @@ a.form__button--text:hover { color: var(--button-text-fg); }
     align-items: center;
     gap: 4px;
 }
-.post__tip-button {
-    padding: 2px 10px;
+.post__tip-button,
+.post__tip-input {
+    box-sizing: border-box;
+    height: 26px;
+    line-height: 24px;
+    padding: 0 10px;
     border: 1px solid var(--ms-line);
     border-radius: 999px;
+    font-size: 13px;
+    margin: 0;
+    align-self: center;
+}
+.post__tip-button {
+    display: inline-flex;
+    align-items: center;
 }
 .post__tip-button:hover {
     background-color: transparent;
@@ -1432,9 +1443,6 @@ a.form__button--text:hover { color: var(--button-text-fg); }
 }
 
 .post__tip-input {
-    border: 1px solid var(--ms-line);
-    border-radius: 999px;
-    padding: 2px 10px;
     background: transparent;
 }
 .post__tip-input:hover,
