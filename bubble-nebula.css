@@ -1403,7 +1403,7 @@ a.form__button--text:hover { color: var(--button-text-fg); }
 .post__toolbar {
     align-items: center;
     gap: 2px;
-    padding: 0 6px;
+    padding: 5px 6px;
 }
 .post__permalink,
 .post__quote,
