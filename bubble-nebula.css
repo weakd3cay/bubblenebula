@@ -106,7 +106,7 @@
     --color-purple: color-mix(in srgb, var(--ms-accent), var(--ms-accent-2));
     --color-light-purple: color-mix(in srgb, var(--color-purple), white 20%);
     --color-dark-purple: color-mix(in srgb, var(--color-purple), black 55%);
-    --color-blue: var(--ms-text);
+    --color-blue: color-mix(in srgb, var(--ms-accent) 35%, var(--ms-text));
     --color-light-blue: var(--ms-accent);
     --color-dark-blue: color-mix(in srgb, var(--ms-accent-2), black 55%);
     --color-light-orange: var(--ms-free);
@@ -391,7 +391,7 @@
     --ms-ground: #120a1e;
     --ms-sky-top: #1c0f33;
     --ms-sky-bottom: #120a1e;
-    --ms-text: #efe3f7;
+    --ms-text: #e0d2ee;
     --ms-muted: #a08fb8;
     --ms-faint: #5f5178;
     --ms-accent: #ff8fc2;
@@ -1429,6 +1429,15 @@ a.form__button--text:hover { color: var(--button-text-fg); }
 .post__tip-button:hover {
     background-color: transparent;
     border-color: color-mix(in srgb, var(--ms-accent) 50%, transparent);
+}
+
+.post__tip-input {
+    border-bottom-color: var(--ms-line);
+}
+.post__tip-input:focus,
+.post__tip-input:focus-visible {
+    outline: none;
+    border-bottom-color: var(--ms-accent);
 }
 
 /* ---------- Colours UNIT3D hardcodes outside its variables ---------- */
