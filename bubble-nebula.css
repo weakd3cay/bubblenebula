@@ -1015,6 +1015,11 @@ body > header::before {
     color: var(--ms-muted);
 }
 
+.panel__actions:has(.form__label--floating) {
+    padding-top: 14px;
+    padding-bottom: 6px;
+}
+
 .data-table time {
     white-space: nowrap;
 }
