@@ -1566,6 +1566,9 @@ hr,
 
 .data-table__actions {
     justify-content: flex-start;
+
+    gap: 24px;
+    padding-inline-end: 18px;
 }
 
 .data-table__action .form__button--text {
