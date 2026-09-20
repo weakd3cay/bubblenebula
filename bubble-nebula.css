@@ -1347,6 +1347,29 @@ main {
     }
 }
 
+.top-nav__icon-bar.mobile {
+    justify-content: center;
+}
+
+@media (max-width: 767px) {
+
+    .panel__tabs {
+        flex-wrap: wrap;
+    }
+
+    .random__media {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(5, 110px);
+        grid-template-areas:
+            "media media1"
+            "media2 media3"
+            "media4 media5"
+            "media6 media7"
+            "media8 media8";
+        height: auto;
+    }
+}
+
 @media (max-width: 767px) {
     body > header {
         position: relative;
