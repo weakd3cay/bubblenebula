@@ -1567,6 +1567,11 @@ hr,
 .data-table__actions {
     justify-content: flex-start;
 }
+
+.data-table__action .form__button--text {
+    margin-inline: 0;
+    padding-inline: 0;
+}
 .bbcode-input__tab-label {
     color: var(--ms-muted);
 }
