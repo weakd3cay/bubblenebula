@@ -819,9 +819,10 @@ body > header::before {
     height: 36px;
 }
 
+.quick-search__inputs,
 .quick-search:focus-within .quick-search__inputs,
 .quick-search:active .quick-search__inputs {
-    width: max(100%, 240px);
+    width: 100%;
 }
 .quick-search:focus-within .quick-search__input,
 .quick-search:active .quick-search__input {
