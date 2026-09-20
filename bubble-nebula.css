@@ -1011,6 +1011,10 @@ body > header::before {
     color: var(--ms-muted);
 }
 
+.form__group--horizontal + .form__group--short-horizontal {
+    margin-top: 18px;
+}
+
 .form__standard-icon-button,
 .form__contained-icon-button {
     border-radius: 50%;
