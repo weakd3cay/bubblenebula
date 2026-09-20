@@ -422,9 +422,10 @@
     --ms-moon-peek: 86px;
 
     --ms-moon-x: -62px;
-    --ms-moon-w-phone: 96px;
-    --ms-moon-h-phone: 56px;
-    --ms-moon-top-phone: -22px;
+
+    --ms-moon-w-phone: 127px;
+    --ms-moon-h-phone: 74px;
+    --ms-moon-pos-phone: right -29px bottom calc(41px - 74px);
 }
 
 html[data-variant='comet'] {
@@ -645,7 +646,7 @@ body > header::before {
 @media (max-width: 767px) {
     body > header::before {
         background-size: var(--ms-moon-w-phone, 72px) var(--ms-moon-h-phone, 72px);
-        background-position: right 46px top var(--ms-moon-top-phone, -28px);
+        background-position: var(--ms-moon-pos-phone, right 46px top -28px);
     }
 }
 
