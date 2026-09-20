@@ -565,7 +565,7 @@ body > header::after {
         linear-gradient(180deg, var(--ms-sky-top), var(--ms-sky-bottom)) 0 0 / 100% 100vh no-repeat;
 }
 
-@supports (animation-timeline: scroll()) and (animation-range: 0px 80px) {
+@supports (animation-timeline: scroll()) and (animation-range: 0px 10px) {
     body > header::after {
         opacity: 0;
         animation-name: ms-header-backing;
@@ -574,7 +574,7 @@ body > header::after {
         animation-fill-mode: both;
         animation-timeline: scroll(root);
         animation-range-start: 0px;
-        animation-range-end: 80px;
+        animation-range-end: 10px;
     }
     @keyframes ms-header-backing {
         to { opacity: 1; }
