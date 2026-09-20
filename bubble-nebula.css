@@ -1024,6 +1024,12 @@ body > header::before {
     color: var(--ms-muted);
 }
 
+.panel__header > .panel__heading,
+.panel__header > .panel__actions,
+.panel__header .panel__action {
+    background-color: transparent;
+}
+
 .panel__actions:has(.form__label--floating) {
     padding-top: 14px;
     padding-bottom: 6px;
