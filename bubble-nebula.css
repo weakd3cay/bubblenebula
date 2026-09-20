@@ -996,6 +996,10 @@ body > header::before {
     color: var(--ms-muted);
 }
 
+:root {
+    accent-color: var(--ms-accent);
+}
+
 .form__text,
 .form__select {
     border-radius: var(--ms-r-input);
