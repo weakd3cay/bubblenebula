@@ -1238,7 +1238,9 @@ main {
 
 @media (max-width: 1100px) {
     .panelV2:has(> .panel__header > .panel__actions) {
-        overflow: visible;
+
+        overflow-x: clip;
+        overflow-y: visible;
     }
     .panel__actions:hover,
     .panel__actions:focus-within {
