@@ -1084,16 +1084,21 @@ body > header::before {
 }
 
 .bbcode-input__icon-bar {
-    gap: 6px;
+    gap: 8px;
 }
 .bbcode-input__icon-bar .form__standard-icon-button {
-    width: 38px;
-    height: 38px;
+    flex: none;
+    display: inline-grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
     min-width: 0;
     padding: 0;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    border-radius: var(--ms-r-input);
+}
+.bbcode-input__icon-bar .form__standard-icon-button:hover,
+.bbcode-input__icon-bar .form__standard-icon-button:active {
+    transform: none;
 }
 
 .form__standard-icon-button--skinny,
