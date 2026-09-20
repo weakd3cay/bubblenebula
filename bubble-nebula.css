@@ -1025,6 +1025,14 @@ body > header::before {
     color: var(--ms-muted);
 }
 
+.panelV2 .panel__heading {
+    padding-left: 7px;
+}
+.panelV2:has(> .panel__body) > .panel__heading,
+.panelV2:has(> .panel__body) > .panel__header > .panel__heading {
+    padding-left: 20px;
+}
+
 .panel__header > .panel__heading,
 .panel__header > .panel__actions,
 .panel__header .panel__action {
