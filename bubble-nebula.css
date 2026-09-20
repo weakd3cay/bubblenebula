@@ -1336,6 +1336,17 @@ main {
     border-radius: 0;
 }
 
+@media (max-width: 1200px) {
+    .data-table > tbody > tr.torrent-search--list__row > td,
+    .data-table > tbody > tr.torrent-search--list__no-poster-row > td {
+        border-bottom: 0;
+    }
+    .data-table > tbody > tr.torrent-search--list__row:not(:last-child),
+    .data-table > tbody > tr.torrent-search--list__no-poster-row:not(:last-child) {
+        border-bottom: var(--data-table-tr-border);
+    }
+}
+
 @media (max-width: 767px) {
     body > header {
         position: relative;
