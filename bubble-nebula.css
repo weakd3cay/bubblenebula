@@ -1085,6 +1085,8 @@ body > header::before {
 
 .bbcode-input__icon-bar {
     gap: 8px;
+
+    padding-block: 10px;
 }
 .bbcode-input__icon-bar .form__standard-icon-button {
     flex: none;
