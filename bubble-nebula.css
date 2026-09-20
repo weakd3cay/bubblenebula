@@ -1015,6 +1015,10 @@ body > header::before {
     color: var(--ms-muted);
 }
 
+.data-table time {
+    white-space: nowrap;
+}
+
 .form__group--horizontal + .form__group--short-horizontal {
     margin-top: 18px;
 }
@@ -1582,10 +1586,17 @@ hr,
 .data-table__action .form__button--text {
     margin-inline: 0;
     padding-inline: 0;
+
+    white-space: nowrap;
     transition: color 140ms ease;
 }
 
-.data-table__action .form__button--text:hover,
+.data-table__action .form__button--text:disabled {
+    color: var(--ms-muted);
+    cursor: default;
+}
+
+.data-table__action .form__button--text:hover:not(:disabled),
 .data-table__action .form__button--text:focus-visible {
     color: color-mix(in srgb, var(--ms-accent) 80%, black);
     filter: none;
