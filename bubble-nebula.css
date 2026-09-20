@@ -1558,16 +1558,22 @@ hr,
 }
 
 /* ---------- Colours UNIT3D hardcodes outside its variables ---------- */
+
 .panel__tab--active {
     color: var(--ms-accent);
-    border-bottom-color: var(--ms-accent);
+    border-bottom-color: transparent;
+}
+
+.data-table__actions {
+    justify-content: flex-start;
 }
 .bbcode-input__tab-label {
     color: var(--ms-muted);
 }
+
 .bbcode-input__tab-input:checked + .bbcode-input__tab-label {
     color: var(--ms-accent);
-    border-bottom-color: var(--ms-accent);
+    border-bottom: 0;
 }
 .form__text:focus + .form__label--floating,
 .form__textarea:focus + .form__label--floating {
