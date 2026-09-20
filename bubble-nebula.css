@@ -1357,6 +1357,37 @@ main {
         flex-wrap: wrap;
     }
 
+    .blocks__top-torrents .torrent-search--list__poster,
+    .blocks__top-torrents .torrent-search--list__format {
+        display: none;
+    }
+    .blocks__top-torrents .torrent-search--list__row {
+        grid-template-areas:
+            "overview overview overview overview overview overview overview buttons buttons buttons buttons buttons"
+            "age age age age size size size size rating rating rating rating"
+            "seeders seeders seeders seeders leechers leechers leechers leechers completed completed completed completed";
+    }
+    .blocks__top-torrents .torrent-search--list__buttons {
+        place-content: center right;
+    }
+    .blocks__top-torrents .torrent-search--list__buttons > div {
+        padding-left: 0;
+        column-gap: 0.5rem;
+    }
+
+    .blocks__top-torrents .torrent-search--list__buttons .form__standard-icon-button,
+    .blocks__top-torrents .torrent-search--list__buttons .form__contained-icon-button--filled {
+        flex-shrink: 0;
+        width: 40px;
+        height: 40px;
+        min-width: 0;
+
+        padding: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     .random__media {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(5, 110px);
