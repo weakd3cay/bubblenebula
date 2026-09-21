@@ -1088,7 +1088,8 @@ body > header::before {
 
     padding-block: 10px;
 }
-.bbcode-input__icon-bar .form__standard-icon-button {
+.bbcode-input__icon-bar .form__standard-icon-button,
+.chat-input__icon-bar .form__standard-icon-button {
     flex: none;
     display: inline-grid;
     place-items: center;
@@ -1099,8 +1100,32 @@ body > header::before {
     border-radius: var(--ms-r-input);
 }
 .bbcode-input__icon-bar .form__standard-icon-button:hover,
-.bbcode-input__icon-bar .form__standard-icon-button:active {
+.bbcode-input__icon-bar .form__standard-icon-button:active,
+.chat-input__icon-bar .form__standard-icon-button:hover,
+.chat-input__icon-bar .form__standard-icon-button:active {
     transform: none;
+}
+
+.chat-input__icon-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.chat-input__group-desktop {
+    align-items: center;
+    gap: 8px;
+}
+.chat-input__section + .chat-input__section {
+    margin-top: 16px;
+}
+
+.chat-input__section > .form__label--floating {
+    background-color: var(--ms-surface);
 }
 
 .form__standard-icon-button--skinny,
@@ -1602,7 +1627,8 @@ a.form__button--text:hover { color: var(--button-text-fg); }
     --donation-chart-monthly-border: #c9b6ff;
 }
 hr,
-.bbcode-input__icon-separator {
+.bbcode-input__icon-separator,
+.chat-input__icon-separator {
     border-color: var(--ms-line);
 }
 .tooltip .tooltip-inner,
